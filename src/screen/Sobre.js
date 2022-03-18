@@ -1,10 +1,13 @@
 import React from 'react'
 import {View, Text} from 'react-native'
+import { withTheme } from 'react-native-paper'
 
-export default function Sobre({route}){
+ function Sobre({route, theme}){
+     const { colors } = theme
     return(
-        <View>
-            <Text>Sobre o app EasyWay</Text>
+        <View style={{backgroundColor: colors.surface}}>
+            <Text tyle={{color: colors.text}}>Sobre o app EasyWay</Text>
         </View>
     )
 }
+export default withTheme(Sobre)
